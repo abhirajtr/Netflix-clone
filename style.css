@@ -1,0 +1,261 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+img{
+    max-width: 100%;
+}
+header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 26px 56px;
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+}
+header a.logo{
+    display: block;
+}
+header .logo svg{
+    fill: #e50914;
+    height: 37px;
+}
+header div+div{
+    text-align: right;
+}
+header a.button{
+    display: inline-block;
+    background-color: #e50914;
+    text-decoration: none;
+    color: #fff;
+    padding: 7px 17px;
+    border-radius: 3px;
+}
+header select{
+    background: transparent;
+    color: #fff;
+    /* padding: 6px 17px; */
+    padding: 6px 0 6px 20px;
+    border-radius: 3px;
+}
+header div.select{
+    display: inline-block;
+    margin-right: 30px;
+}
+header div.select svg{
+    height: 20px;
+    color: #fff;
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 2px;
+}
+div.splash div.background img{
+    max-width: 100%;
+    opacity: 0.6;
+}
+div.splash{
+    position: relative;
+}
+div.splash div.gradient{
+    position: absolute;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8));
+    inset: 0;
+}
+div.splash div.content{
+    position: absolute;
+    inset: 0;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    max-width: 655px;
+    left: 50%;
+    margin-left: -327.5px;
+}
+div.splash h1,div.splash h2,div.splash h3{
+    font-weight: normal;
+}
+div.splash h1{
+    font-size: 3.125rem;
+    font-weight: bold;
+}
+div.splash h2{
+    font-size: 1.625rem;
+    margin-top: 13px;
+    margin-bottom: 29px;
+}
+div.splash h3{
+    font-size: 1.2rem;
+}
+
+div.cta form{
+    position: relative;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr max-content;
+}
+div.cta input{
+    width: 100%;
+    padding: 10px 10px 0;
+    font-size: 1.2rem;
+}
+div.cta input~span{
+    position: absolute;
+    top: 13px;
+    left: 10px;
+    z-index: 3;
+    color: #aaa;
+    transition: all 0.3s ease;
+    pointer-events: none; 
+}
+div.splash input:focus{
+    /* padding-top: 14px;
+    padding-bottom: 6px; */
+    /* outline: none; */
+}
+div.cta input:focus~span{
+    top:2px ;
+    font-size: 0.8rem;
+}
+div.cta button{
+    margin-left: 2px;
+    color: #fff;
+    font-size: 1.625rem;
+    padding: 2.8px 12px;
+    background-color: #e50914;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+}
+
+section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 46px;
+    padding: 75px 35px;
+    align-items: center;
+    border-top: 8px solid #222;
+}
+section div.texts h1{
+    font-size: 3.125rem;
+    margin-bottom: 8px;
+}
+section div.texts p{
+    font-size: 1.625rem;
+}
+.media{
+ position: relative;   
+}
+.media  img{
+    width: 400px;
+    z-index: 5;
+}
+.media.s1 video{
+    width: 293px;
+    position: absolute;
+    top: 62px;
+    left: 51px;
+    z-index: -1;
+}
+section:nth-child(even) div.texts{
+    order: 2;
+}
+.media.s3 img{
+    z-index: 5;
+}
+.media.s3 video{
+    z-index: -1;
+    width: 256px;
+    position: absolute;
+    top: 27px;
+    left: 71px;
+
+}
+.media.s4 img{
+    width: 459px;
+    margin-left: 100px;
+}
+section.last{
+    border-bottom: 8px solid #222;
+}
+div.faq{
+    padding: 70px 30px;
+}
+div.faq h1{
+    font-size: 3.125rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+div.questions{
+    max-width: 635px;
+    margin: 0 auto;
+}
+div.question{
+    position: relative;
+    background-color: #303030;
+    margin-bottom: 10px;
+}
+div.question svg{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 14px;
+    right: 30px;
+    transform: rotate(45deg);
+    transition: all 0.3s ease;
+}
+div.question .header{
+    display: block;
+    padding: 20px 30px;
+    border-bottom: 1px solid #000;
+}
+div.question div.content{
+    padding: 0 30px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+div.question input[type="checkbox"]{
+    display: none;
+}
+div.question input[type="checkbox"]:checked ~ div.content{
+    padding: 30px 30px;
+    max-height: 600px;
+}
+div.question input[type="checkbox"]:checked ~ .header svg{
+    transform: rotate(0deg);
+}
+div.faq h3{
+    font-weight: normal;
+    text-align: center;
+    margin: 40px 0 20px;
+}
+div.faq form{
+    max-width: 600px;
+    margin: 0 auto;
+}
+footer{
+    border-top: 8px solid #222;
+}
+footer table{
+    margin: 0 auto;
+}
+footer table tr{
+    margin: 200px 100px;
+}
+
+/* section div.download{
+    border: 2px solid #666;
+    border-radius: 15px;
+    padding: 10px;
+    height: 95px;
+} */
+/* section div.download img.cover{
+    height: 100%;
+    object-fit: contain;
+} */
